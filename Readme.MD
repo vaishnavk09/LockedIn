@@ -1,37 +1,37 @@
 # 🎮 LockedIn
 
-A gamified productivity app that turns focus sessions into an RPG experience. Earn XP, level up, and compete with friends in real-time focus rooms!
+A gamified productivity app that turns focus sessions into an immersive 3D RPG experience. Earn XP, level up, and compete with friends in real-time focus rooms!
 
 ## 🌟 Features
 
-- 🎯 **Pomodoro-style focus sessions** with XP rewards
-- 🏆 **Real-time leaderboards** and competitive rankings
-- 👥 **Multiplayer focus rooms** (2-5 people working together)
-- 🎨 **Character progression** with unlockable classes
-- 📊 **Daily quests and challenges**
-- 🔥 **Streak tracking** with visual rewards
+- 🎯 **3D Pomodoro-style focus sessions** with interactive 3D elements
+- 🏆 **Real-time Global Leaderboards** and competitive rankings
+- 👥 **Multiplayer Focus Rooms** (live avatar statuses via Socket.io)
+- 🎨 **Character progression** and XP leveling system
+- 📊 **Animated Daily quests and challenges**
+- 🔥 **Stunning Glassmorphism UI** with Framer Motion animations
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React (Vite)
-- Tailwind CSS
-- Socket.io Client
-- React Query
-- Zustand
+- **React 19 (Vite)**
+- **Tailwind CSS v4** (Custom Dark Mode & Glassmorphism)
+- **Framer Motion** (Micro-animations)
+- **React Three Fiber & Drei** (3D Environment)
+- **Zustand** (Local State Management)
+- **Socket.io Client** (Real-time syncing)
 
 ### Backend
-- Node.js + Express
-- MongoDB + Mongoose
-- Socket.io
-- JWT Authentication
-- Passport.js (Google OAuth)
+- **Node.js + Express**
+- **MongoDB + Mongoose**
+- **Socket.io** (Room Management)
+- **JWT Authentication**
 
 ## 📦 Project Structure
 ```
 lockedin/
 ├── backend/          # Node.js REST API + WebSocket server
-├── frontend/         # React application (coming soon)
+├── frontend/         # React Vite application 
 └── README.md         # You are here
 ```
 
@@ -39,12 +39,11 @@ lockedin/
 
 ### Prerequisites
 - Node.js 18+
-- MongoDB Atlas account (free tier)
-- Google OAuth credentials
+- MongoDB instance (local or Atlas)
 
 ### Backend Setup
 
-1. Navigate to backend folder
+1. Navigate to the backend folder
 ```bash
 cd backend
 ```
@@ -54,52 +53,44 @@ cd backend
 npm install
 ```
 
-3. Create `.env` file
+3. Create a `.env` file (see `.env.example`)
 ```bash
 MONGODB_URI=your-mongodb-connection-string
 PORT=5000
-NODE_ENV=development
+JWT_SECRET=your-secret-key
 ```
 
-4. Run development server
+4. Run the development server
 ```bash
 npm run dev
 ```
 
-Server runs at `http://localhost:5000`
-
 ### Frontend Setup
-Coming soon...
 
-## 📋 Development Roadmap
+1. Navigate to the frontend folder
+```bash
+cd frontend
+```
 
-- [x] **Phase 1:** Core MVP - Solo focus engine
-  - [x] Server setup
-  - [x] User model
-  - [ ] Session model
-  - [ ] Focus timer API
-  - [ ] XP/leveling system
+2. Install dependencies
+```bash
+npm install
+```
 
-- [ ] **Phase 2:** Social layer
-  - [ ] Leaderboards
-  - [ ] Friend system
+3. Run the development server
+```bash
+npm run dev
+```
 
-- [ ] **Phase 3:** Real-time features
-  - [ ] Focus rooms
-  - [ ] Live presence tracking
+Server runs at `http://localhost:5173`. Open it in your browser to experience the 3D focus app!
 
-- [ ] **Phase 4:** Engagement features
-  - [ ] Daily quests
-  - [ ] Character customization
-  - [ ] Achievement system
+## 📋 Development Status
 
-## 🎯 Current Status
-
-**Phase 1 - In Progress**
-- ✅ Backend server running
-- ✅ MongoDB connected
-- ✅ User model created
-- 🔄 Building Session model next
+- ✅ **Phase 1:** Core MVP - Scaffolding & Design System
+- ✅ **Phase 2:** Core Focus Timer & 3D Gamification
+- ✅ **Phase 3:** Backend Integration (User & Auth structure)
+- ✅ **Phase 4:** Real-time Multi-player (Focus Rooms via Socket.io)
+- ✅ **Phase 5:** Progression UI & Leaderboards
 
 ## 📝 License
 
@@ -107,7 +98,7 @@ MIT
 
 ## 👨‍💻 Developer
 
-Built as a portfolio project to showcase full-stack MERN development skills.
+Built as a portfolio project to showcase full-stack MERN + 3D Gamification development skills.
 
 ---
 
